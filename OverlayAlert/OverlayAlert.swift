@@ -27,8 +27,6 @@ public class OverlayAlert: UILabel {
         self.textAlignment = .Center
         
         self.alertStyle = .Success
-        
-        self.fade()
     }
     
     class func prepareFrame(frame: CGRect) -> CGRect {
@@ -62,7 +60,7 @@ public class OverlayAlert: UILabel {
         initCode()
     }
     
-    func fade() {
+    public func fade() {
         self.fadeOut(duration: 2.0, delay: 3.0, completion: {
             (finished: Bool) -> Void in
             self.removeFromSuperview()

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "OverlayAlert"
-  spec.version = "0.0.5"
+  spec.version = "0.0.6"
   spec.summary = "Sample framework from blog post, not for real world use."
   spec.homepage = "https://github.com/rodrigoalvesvieira/OverlayAlert"
   spec.license = { type: 'MIT', file: 'LICENSE' }
