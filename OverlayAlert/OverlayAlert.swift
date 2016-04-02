@@ -15,9 +15,7 @@ public class OverlayAlert: UILabel {
     
     var alertStyle: OverlayAlertStyle?
     
-    required public init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-        
+    private func initCode() {
         let defaultFrame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height / 32)
         
         self.frame = defaultFrame
@@ -33,26 +31,30 @@ public class OverlayAlert: UILabel {
         self.fade()
     }
     
-    convenience public init() {
-        self.init()
-
-        self.fade()
+    // IB Initialization
+    required public init?(coder decoder: NSCoder) {
+        super.init(coder: decoder)
+        self.initCode()
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initCode()
     }
     
     convenience public init(text: String) {
-        self.init()
+        self.init(frame: CGRect.zero)
+
         self.text = text
-        
-        self.fade()
+        self.initCode()
     }
     
     convenience init(text: String, withStyle: OverlayAlertStyle) {
-        self.init()
-        
+        self.init(frame: CGRect.zero)
+
+        initCode()
         self.text = text
         self.alertStyle = withStyle
-        
-        self.fade()
     }
     
     func fade() {
