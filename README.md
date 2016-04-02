@@ -11,7 +11,7 @@ pod 'OverlayAlert'
 To integrate OverlayAlert into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ruby
-github "dzenbot/OverlayAlert"
+github "rodrigoalvesvieira/OverlayAlert"
 ```
 
 ## Usage

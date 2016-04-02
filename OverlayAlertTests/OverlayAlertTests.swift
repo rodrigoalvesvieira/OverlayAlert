@@ -13,8 +13,13 @@ import OverlayAlert
 class OverlayAlertTests: QuickSpec {
     override func spec() {
         describe("OverlayAlert") {
-            it("works") {
-                expect(true).to(beTrue())
+            let defaultFont = UIFont(name: "AvenirNext-Medium", size: 14)
+            
+            it("is properly initialized with default properties") {
+                let overlayMessage = OverlayAlert(text: "Success!")
+
+                expect(overlayMessage.text).to(equal("Success!"))
+                expect(overlayMessage.font).to(equal(defaultFont))
             }
         }
     }

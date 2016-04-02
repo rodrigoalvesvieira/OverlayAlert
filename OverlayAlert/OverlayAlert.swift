@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OverlayAlert: UILabel {
+public class OverlayAlert: UILabel {
     let screenSize = UIScreen.mainScreen().bounds
     
     let defaultColor = UIColor(rgba: "#208dad")
@@ -15,10 +15,12 @@ class OverlayAlert: UILabel {
     
     var alertStyle: OverlayAlertStyle?
     
-    init() {
+    required public init?(coder decoder: NSCoder) {
+        super.init(coder: decoder)
+        
         let defaultFrame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height / 32)
         
-        super.init(frame: defaultFrame)
+        self.frame = defaultFrame
         
         self.font = defaultFont
         self.tintColor = defaultColor
@@ -31,7 +33,13 @@ class OverlayAlert: UILabel {
         self.fade()
     }
     
-    convenience init(text: String) {
+    convenience public init() {
+        self.init()
+
+        self.fade()
+    }
+    
+    convenience public init(text: String) {
         self.init()
         self.text = text
         
@@ -52,9 +60,5 @@ class OverlayAlert: UILabel {
             (finished: Bool) -> Void in
             self.removeFromSuperview()
         })
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
