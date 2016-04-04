@@ -1,0 +1,6 @@
+framework module Pods_OverlayAlertSample {
+  umbrella header "Pods-OverlayAlertSample-umbrella.h"
+
+  export *
+  module * { export * }
+}

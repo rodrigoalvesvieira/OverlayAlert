@@ -2,8 +2,6 @@
 
 A small UILabel library to enable Snapchat-like top screen alerts.
 
-[![OverlayAlertSample](https://dl.dropboxusercontent.com/u/7743293/IMG_5056-small.jpg)](https://dl.dropboxusercontent.com/u/7743293/IMG_5056-small.jpg)
-
 ## Installation
 
 Available in [CocoaPods](http://cocoapods.org/?q=OverlayAlert)

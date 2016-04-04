@@ -1,0 +1,6 @@
+framework module OverlayAlert {
+  umbrella header "OverlayAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}
